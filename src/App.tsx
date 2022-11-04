@@ -1,26 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
+import {Scoreboard} from "./components/Scoreboard";
+import {UniversalButton} from "./components/UniversalButton";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const startValue = 0
+    const maxValue = 5
+    const [score, setScore] = useState<number>(startValue)
+    const increaseValue = () => {
+        score < maxValue && setScore(score + 1)
+    }
+
+    const resetValue = () => {
+        setScore(startValue)
+    }
+
+    return (
+        <div className='App'>
+            <div>
+                <Scoreboard score={score} maxValue={maxValue}/>
+                <div className={styles.buttonBox}>
+                    <UniversalButton name={'inc'} callBack={increaseValue} isDisabled={score === maxValue}/>
+                    <UniversalButton name={'res'} callBack={resetValue} isDisabled={score === startValue}/>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;

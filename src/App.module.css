@@ -1,0 +1,50 @@
+.scoreboard {
+  margin: 50px auto 5px;
+  /*padding-top: 10px;*/
+  height: 100px;
+  width: 300px;
+  border: 3px solid #4A148C;
+  text-align: center;
+  font-size: 78px;
+  background-color: #BA68C8;
+  border-radius: 13px;
+  color:#4A148C;
+}
+.scoreLimit {
+  margin: 50px auto 5px;
+  height: 100px;
+  width: 300px;
+  border: 3px solid #4A148C;
+  text-align: center;
+  font-size: 78px;
+  color: red;
+  font-weight: bold;
+  background-color: #BA68C8;
+  border-radius: 13px;
+}
+.buttonBox {
+  text-align: center;
+  border: 3px solid #4A148C;
+  background-color: #BA68C8;
+  width: 300px;
+  margin: 5px auto;
+  border-radius: 13px;
+}
+.button {
+  width: 100px;
+  height: 40px;
+  margin: 5px;
+  background-color: #7B1FA2;
+  color: white;
+  border-radius: 7px;
+  font-size: 30px;
+}
+button:disabled{
+  width: 100px;
+  height: 40px;
+  margin: 5px;
+  background-color: #E1BEE7;
+  color: white;
+  border-radius: 7px;
+}
+
